@@ -47,7 +47,7 @@ btn.addEventListener("click", function(){
         console.log(  z.nome);
         let on = document.createElement("h5");
         testo.append(on)
-        on.innerHTML =`Nome: ${z.nome} <br> Ruolo : ${z.ruolo} <br> foto : ${z.foto}`  
+        on.innerHTML =`Nome: ${z.nome} <br> Ruolo : ${z.ruolo} <br> foto : <img src="./img/${z.foto}">`  
     }
 
 })
