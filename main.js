@@ -1,4 +1,5 @@
 ///***********************ARRAY DI OGGETTI */
+////MILESTONE 0
 let team =[
 { 
     nome : "Wayne Barnett" ,
@@ -31,8 +32,22 @@ let team =[
     foto : "barbara-ramos-graphic-designer.jpg" ,
 }
 ]
+////// MILESTONE 1
+// for(let key in team){
+//     console.log("Nome: " + team[key].nome )
+//     console.log("Ruolo: " + team[key].ruolo)
+// }
+///// MILESTONE 2
+let btn = document.getElementById("team")
+let testo = document.getElementById("testo")
+btn.addEventListener("click", function(){
+    
+    for (x = 0; x <= team.length -1; x++){
+        z = team[x]
+        console.log(  z.nome);
+        let on = document.createElement("h5");
+        testo.append(on)
+        on.innerHTML =`Nome: ${z.nome} <br> Ruolo : ${z.ruolo} <br> foto : ${z.foto}`  
+    }
 
-for(let key in team){
-    console.log("Nome: " + team[key].nome )
-    console.log("Ruolo: " + team[key].ruolo)
-}
+})
