@@ -41,13 +41,12 @@ let team =[
 let btn = document.getElementById("team")
 let testo = document.getElementById("testo")
 btn.addEventListener("click", function(){
-    
     for (x = 0; x <= team.length -1; x++){
         z = team[x]
         console.log(  z.nome);
-        let on = document.createElement("h5");
-        testo.append(on)
-        on.innerHTML =`Nome: ${z.nome} <br> Ruolo : ${z.ruolo} <br> foto : <img src="./img/${z.foto}">`  
+        let card = document.createElement("div");
+        card.classList.add("card-body" , "rounded-3" , "p-2", "m-2" ,"col-3", "bg-primary")
+        testo.append(card)
+        card.innerHTML =`<h5 class="card-title">Nome: ${z.nome}</h5> <br> <p class="card-text">Ruolo : ${z.ruolo} </p> <img class="rounded-4 size" src="./img/${z.foto}">`;  
     }
-
 })
