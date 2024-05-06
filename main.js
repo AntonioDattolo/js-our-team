@@ -31,3 +31,8 @@ let team =[
     foto : "barbara-ramos-graphic-designer.jpg" ,
 }
 ]
+
+for(let key in team){
+    console.log("Nome: " + team[key].nome )
+    console.log("Ruolo: " + team[key].ruolo)
+}
